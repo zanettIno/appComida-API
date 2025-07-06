@@ -21,6 +21,16 @@ def iniciar_bd():
             preco_comida    REAL NOT NULL)
     ''')
 
+    c.execute('''
+        INSERT INTO comida (nome_comida, preco_comida) VALUES
+        ('Pizza', 25.00),
+        ('Hamburguer', 15.00),
+        ('Salada', 10.00),
+        ('Refrigerante', 5.00),
+        ('Suco', 7.00)
+    ON CONFLICT(nome_comida) DO NOTHING    
+    ''')
+
     # CRIACAO DE TABELA DE CARRINHO
     c.execute('''
         CREATE TABLE IF NOT EXISTS carrinho (
