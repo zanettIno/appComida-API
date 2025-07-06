@@ -27,8 +27,7 @@ def iniciar_bd():
         ('Hamburguer', 15.00),
         ('Salada', 10.00),
         ('Refrigerante', 5.00),
-        ('Suco', 7.00)
-    ON CONFLICT(nome_comida) DO NOTHING    
+        ('Suco', 7.00)    
     ''')
 
     # CRIACAO DE TABELA DE CARRINHO
