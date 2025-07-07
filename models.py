@@ -13,6 +13,10 @@ def iniciar_bd():
             senha_usuario   TEXT NOT NULL)
     ''')
 
+    c.execute('''
+        DELETE FROM usuario
+    ''')
+
     # CRIACAO DE TABELA DAS COMIDAS
     c.execute('''
         CREATE TABLE IF NOT EXISTS comida (
